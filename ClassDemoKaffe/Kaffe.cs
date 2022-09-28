@@ -40,7 +40,23 @@ namespace ClassDemoKaffe
         public double Price
         {
             get { return _price; }
-            set { _price = value; }
+            set 
+            {
+                if ( value > 0 )
+                {
+                    // pris større end 0
+                    _price = value;
+                }
+                else
+                {
+                    // fejl prisen er negativ eller 0
+
+                    // Snyder lidt
+                    Console.WriteLine("Fejl pris kan ikke være negativ");
+
+                }
+
+            }
         }
 
 
